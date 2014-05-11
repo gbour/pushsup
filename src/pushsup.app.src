@@ -1,0 +1,19 @@
+{application, pushsup,
+ [
+  {description, ""},
+  {vsn, "1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib,
+                  crypto,
+                  asn1,
+                  public_key,
+                  ssl,
+                  ranch,
+                  cowlib,
+                  cowboy
+                 ]},
+  {mod, { pushsup_app, []}},
+  {env, []}
+ ]}.
