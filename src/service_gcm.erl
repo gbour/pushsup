@@ -6,11 +6,12 @@
 
 -include_lib("erlson/include/erlson.hrl").
 
--define(SERVER_KEY, "XYZ").
 -export([send/2]).
 
 
 send(Event, PushId) ->
+	{ok, GCMKey} = application:get_env(pushsup, 'GCM_KEY'),
+
     Msg = #{
         registration_ids = [PushId],
         collapse_key = Event
@@ -21,7 +22,7 @@ send(Event, PushId) ->
 
     Resp = ibrowse:send_req("https://android.googleapis.com/gcm/send", 
         [
-            {authorization, <<"key=", ?SERVER_KEY>>},
+            {authorization, <<"key=", GCMKey/binary>>},
             {content_type, <<"application/json">>}
         ], 
         post,

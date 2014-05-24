@@ -15,5 +15,8 @@
                   cowboy
                  ]},
   {mod, { pushsup_app, []}},
-  {env, []}
+  {env, [
+    % GCM SERVER KEY
+    {'GCM_KEY', <<"XYZ">>}
+  ]}
  ]}.
