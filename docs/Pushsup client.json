@@ -1,0 +1,46 @@
+{
+	"id": "17957b43-4ff6-a894-025f-6e00aea92bb4",
+	"name": "Pushsup Client",
+	"description": "",
+	"order": [
+		"abe73fb6-cde4-5127-ca2f-bb6f066e25f1",
+		"391c7230-a41c-1272-c8f4-d5984e9f1ecd"
+	],
+	"folders": [],
+	"timestamp": 1396801335390,
+	"synced": false,
+	"requests": [
+		{
+			"id": "391c7230-a41c-1272-c8f4-d5984e9f1ecd",
+			"headers": "",
+			"url": "http://localhost:8080/push?userid=oss.117&event=call",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"time": 1405258472692,
+			"name": "send push",
+			"description": "",
+			"collectionId": "17957b43-4ff6-a894-025f-6e00aea92bb4",
+			"synced": false
+		},
+		{
+			"id": "abe73fb6-cde4-5127-ca2f-bb6f066e25f1",
+			"headers": "pushid: XYZ\n",
+			"url": "http://localhost:8080/register?userid=oss.117",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"time": 1405261259576,
+			"name": "register device",
+			"description": "",
+			"collectionId": "17957b43-4ff6-a894-025f-6e00aea92bb4",
+			"synced": false
+		}
+	]
+}
